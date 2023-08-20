@@ -8,6 +8,7 @@ const AdminPanel = ({ onBack }) => {
   const [newReceiptData, setNewReceiptData] = useState('');
   const [newReceiptLimit, setNewReceiptLimit] = useState(0);
   const [result, setResult] = useState('');
+  console.log(result);
   const submitHandler = (e) => {
     e.preventDefault();
 
@@ -49,7 +50,7 @@ const AdminPanel = ({ onBack }) => {
           <div
             className={`bg-${
               result === 'fail' ? 'red' : 'green'
-            }-900 p-10 rounded-lg`}
+            }-900 p-4 rounded-lg`}
           >
             <p className="text-2xl font-bold">
               {result === 'fail'
